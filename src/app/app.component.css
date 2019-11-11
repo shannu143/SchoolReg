@@ -1,0 +1,10 @@
+.appContent{
+    background-color:#e8e8e8;
+    /* padding-top: 10px; */
+    padding-right: 0;
+    padding-left: 0;
+}
+.leftMenu{
+    padding: 1px; 
+    z-index: 999;
+}

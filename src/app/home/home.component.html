@@ -1,0 +1,86 @@
+<!-- <div class="header">
+    <p>Home</p>
+</div> -->
+
+<div class="container pt-4">
+    <div class="">
+        <div class="row pb-3 float-right">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4 d-flex px-0 ">
+                <select class="form-control" [(ngModel)]="courseSelected" data-toggle="tooltip" data-placement="right"
+                    title="Select Course" (change)="coursechng()">
+                    <option value=0>--Select Course--</option>
+                    <option value=1>JAVA</option>
+                    <option value=2>NODEJS</option>
+                    <option value=3>SPRING</option>
+                    <option value=4>ANGULAR</option>
+                    <option value=5>HIBERNATE</option>
+                </select>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4 d-flex pr-0 pl-1">
+                <select class="form-control" [(ngModel)]="teacherSelected" data-toggle="tooltip" data-placement="right"
+                    title="Select Teacher">
+                    <option value=0>--Select Teacher--</option>
+                    <option *ngFor="let option of options" [value]="option.teacher_id">{{option.lastName}}
+                        {{option.firstName}}</option>
+                </select>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
+                <button class="btn btn-primary" (click)="getStudentsList()">Get Students</button>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col-lg-12">
+            <label for="course">Course</label>
+            <select class="form-control" [(ngModel)]="courseSelected" data-toggle="tooltip" data-placement="right"
+                title="Select Course" (change)="coursechng()">
+                <option value="null">--Select Course--</option>
+                <option value=1>JAVA</option>
+                <option value=2>NODEJS</option>
+                <option value=3>SPRING</option>
+                <option value=4>ANGULAR</option>
+                <option value=5>HIBERNATE</option>
+            </select>
+        </div>
+    </div> -->
+
+    <!-- <div class="row">
+        <div class="col-lg-12">
+            <label for="teacher">Teacher</label>
+            <select class="form-control" [(ngModel)]="teacherSelected" data-toggle="tooltip" data-placement="right"
+                title="Select Teacher">
+                <option value="null">--Select Teacher--</option>
+                <option *ngFor="let option of options" [value]="option.teacher_id">{{option.lastName}}
+                    {{option.firstName}}</option>
+            </select>
+        </div>
+    </div> -->
+    <!-- <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sbmtBtn">
+            <button class="btn btn-success" (click)="getStudentsList()">Get Students</button>
+        </div> -->
+    <!-- </div> -->
+
+    <table class="table table-hover table-sm">
+        <thead class="thead-light">
+            <tr>
+                <th>Student Name</th>
+                <th>Student Email</th>
+                <th>Student Branch</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{student.name}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.branch}}</td>
+            </tr>
+            <tr  style="text-align:center" *ngIf="students.length == 0"><td colspan="3">No Data Founded</td></tr>
+        </tbody><br>
+    </table>
+    <div class="row pt-5">
+        <div id="chartContainer" style="width: 51%;"></div>
+        <div id="chartContainer1" style="width: 45%;"></div>
+    </div>
+</div>

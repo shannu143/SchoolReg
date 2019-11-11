@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 usrDtls">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                alt="" style="width: 55%;border-radius: 50%;">
+            <p style="color:white">My account</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12" style="padding: 0;">
+            <p class="menuItems" (click)="gotoHome();selected='home'" [ngClass]="{'menuSelected':selected=='home'}" style="color:white">Home
+                <mat-icon aria-hidden="false" aria-label="Example keyboard_arrow_right icon">keyboard_arrow_right
+                </mat-icon>
+            </p>
+            <p class="menuItems" (click)="gotoTeachers();selected='teacher'"
+                [ngClass]="{'menuSelected':selected=='teacher'}" style="color:white">Teachers <mat-icon aria-hidden="false"
+                    aria-label="Example keyboard_arrow_right icon">keyboard_arrow_right</mat-icon>
+            </p>
+            <p class="menuItems" (click)="gotoStudents();selected='student'"
+                [ngClass]="{'menuSelected':selected=='student'}" style="color:white">Students <mat-icon aria-hidden="false"
+                    aria-label="Example keyboard_arrow_right icon">keyboard_arrow_right</mat-icon>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <!-- <mat-icon aria-hidden="false"  aria-label="Example account_circle icon" class="profileIcon">account_circle</mat-icon> -->
+            <p class="profileIcon"></p>
+        </div>
+    </div>
+
+</div>
